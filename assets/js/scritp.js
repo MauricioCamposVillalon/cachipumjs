@@ -1,5 +1,4 @@
 
-
 function validar() {
     do { /* validar eleccion de palabra */
         eleccion = prompt("Escriba su opcion: piedra, papel o tijera");
@@ -16,6 +15,16 @@ function validar() {
     return eleccion;
 }
 
+function cpu(numj){
+    if (numj === 1){
+        reslt = "PIEDRA";
+    }else if (numj === 2){
+        reslt = "PAPEL";
+    }else if (numj === 3){
+        reslt = "TIJERA";
+    }
+    return reslt;
+}
 
 
 alert(`--Juego del Cachipum ---`);
@@ -26,6 +35,9 @@ for (i = 1; i <= jugadas; i++) {
 
 
     jugador = validar();
+    jcpu = Math.trunc((Math.random()* 3) +1);
+    jugCpu = cpu(jcpu);
+    
 
 
 
